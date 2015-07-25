@@ -15,6 +15,7 @@
         Bundle 'mhinz/vim-signify'
         Bundle 'osyo-manga/vim-over'
         Bundle 'gcmt/wildfire.vim'
+    endif
 " }
 
 " General Programming {
