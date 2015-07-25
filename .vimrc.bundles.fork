@@ -1,0 +1,30 @@
+" General {
+    if count(g:spf13_bundle_groups, 'general')
+        Bundle 'scrooloose/nerdtree'
+        Bundle 'altercation/vim-colors-solarized'
+        Bundle 'spf13/vim-colors'
+        Bundle 'jiangmiao/auto-pairs'
+        Bundle 'ctrlpvim/ctrlp.vim'
+        Bundle 'vim-scripts/sessionman.vim'
+        Bundle 'matchit.zip'
+        Bundle 'bling/vim-airline'
+        Bundle 'jistr/vim-nerdtree-tabs'
+        Bundle 'flazz/vim-colorschemes'
+        Bundle 'mbbill/undotree'
+        Bundle 'nathanaelkane/vim-indent-guides'
+        Bundle 'mhinz/vim-signify'
+        Bundle 'osyo-manga/vim-over'
+        Bundle 'gcmt/wildfire.vim'
+" }
+
+" General Programming {
+    if count(g:spf13_bundle_groups, 'programming')
+        Bundle 'scrooloose/syntastic'
+        Bundle 'tpope/vim-fugitive'
+        Bundle 'mattn/webapi-vim'
+        Bundle 'scrooloose/nerdcommenter'
+        if executable('ctags')
+            Bundle 'majutsushi/tagbar'
+        endif
+    endif
+" }
