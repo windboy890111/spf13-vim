@@ -1,5 +1,5 @@
 " General {
-    if count(g:spf13_bundle_groups, 'general')
+    if count(g:spf13_bundle_groups, 'windboy-general')
         Bundle 'scrooloose/nerdtree'
         Bundle 'altercation/vim-colors-solarized'
         Bundle 'spf13/vim-colors'
@@ -19,7 +19,7 @@
 " }
 
 " General Programming {
-    if count(g:spf13_bundle_groups, 'programming')
+    if count(g:spf13_bundle_groups, 'windboy-programming')
         Bundle 'scrooloose/syntastic'
         Bundle 'tpope/vim-fugitive'
         Bundle 'mattn/webapi-vim'
