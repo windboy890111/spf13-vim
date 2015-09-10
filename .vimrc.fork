@@ -1,6 +1,27 @@
 set mouse=""
 set nospell
+set nofoldenable
+set tw=80
+set cc=80
+set nobackup
+set noswapfile
 
 let NERDTreeMouseMode=1
 
 let g:ycm_filetype_whitelist = {'python': 1}
+
+" escape to normal model while popup appear
+inoremap <expr> <Esc>       pumvisible() ? "\<C-e>\<Esc>" : "\<Esc>"
+
+" 定义函数AutoSetFileHead，自动插入文件头
+autocmd BufNewFile *.sh,*.py exec ":call AutoSetFileHead()"
+function! AutoSetFileHead()
+    if &filetype == 'sh'
+        call setline(1, "\#!/bin/bash")
+    endif
+
+    if &filetype == 'python'
+        call setline(1, "\#!/usr/bin/env python")
+        call append(1, "\# -*- coding: UTF-8 -*-")
+    endif
+endfunc
