@@ -1,7 +1,7 @@
 set mouse=""
 set nospell
 set nofoldenable
-set tw=80
+" set tw=80
 set cc=80
 set nobackup
 set noswapfile
@@ -13,6 +13,9 @@ let g:ycm_filetype_whitelist = {'python': 1}
 " escape to normal model while popup appear
 inoremap <expr> <Esc>       pumvisible() ? "\<C-e>\<Esc>" : "\<Esc>"
 
+" goto definition
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
+
 " 定义函数AutoSetFileHead，自动插入文件头
 autocmd BufNewFile *.sh,*.py exec ":call AutoSetFileHead()"
 function! AutoSetFileHead()
@@ -21,7 +24,7 @@ function! AutoSetFileHead()
     endif
 
     if &filetype == 'python'
-        call setline(1, "\#!/usr/bin/env python")
-        call append(1, "\# -*- coding: UTF-8 -*-")
+"        call setline(1, "\#!/usr/bin/env python")
+        call setline(1, "\# -*- coding: UTF-8 -*-")
     endif
 endfunc
