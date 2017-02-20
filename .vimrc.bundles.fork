@@ -29,3 +29,5 @@
         endif
     endif
 " }
+
+Plugin 'vim-airline/vim-airline-themes'

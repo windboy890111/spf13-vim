@@ -1,1 +1,1 @@
-let g:spf13_bundle_groups=['windboy-general', 'windboy-programming', 'python', 'youcompleteme']
+let g:spf13_bundle_groups=['windboy-general', 'windboy-programming', 'python', 'neocomplcache']
